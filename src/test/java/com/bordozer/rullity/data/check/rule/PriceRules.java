@@ -3,8 +3,9 @@ package com.bordozer.rullity.data.check.rule;
 import com.bordozer.rullity.core.Rule;
 import com.bordozer.rullity.core.RuleBuilder;
 import com.bordozer.rullity.data.ActionError;
-import com.bordozer.rullity.data.obj.Price;
+import com.bordozer.rullity.data.fact.Price;
 
+@SuppressWarnings("checkstyle:MagicNumber")
 public final class PriceRules {
 
     public static final Rule<Price, ActionError> PRICE_DATE_IS_NULL_FATAL_RULE = priceDateIsNull();
@@ -27,7 +28,7 @@ public final class PriceRules {
     public static Rule<Price, ActionError> priceIsNull() {
         return RuleBuilder.<Price, ActionError>of()
                 .key("PRICE_IS_NULL")
-                .when(price -> price.getPrice() == null)
+                .when(price -> price.getPriceValue() == null)
                 .then(price -> ActionError.error("Price value is null"))
                 .build();
     }
@@ -36,7 +37,7 @@ public final class PriceRules {
         return RuleBuilder.<Price, ActionError>of()
                 .key("PRICE_IS_NEGATIVE")
                 .fatal(true)
-                .when(price -> price.getPrice() < 0)
+                .when(price -> price.getPriceValue() < 0)
                 .then(price -> ActionError.error("Price is negative"))
                 .build();
     }
@@ -44,7 +45,7 @@ public final class PriceRules {
     public static Rule<Price, ActionError> priceIsTooLow() {
         return RuleBuilder.<Price, ActionError>of()
                 .key("PRICE_IS_TOO_LOW")
-                .when(price -> price.getPrice() < 10)
+                .when(price -> price.getPriceValue() < 10)
                 .then(price -> ActionError.warning("Price is too low"))
                 .build();
     }

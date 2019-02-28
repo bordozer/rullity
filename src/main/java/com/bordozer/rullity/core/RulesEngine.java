@@ -10,6 +10,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+@SuppressWarnings("PMD.AvoidFieldNameMatchingMethodName")
 @Slf4j
 @Getter
 public class RulesEngine<T, R> {

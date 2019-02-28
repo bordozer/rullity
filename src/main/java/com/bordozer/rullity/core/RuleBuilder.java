@@ -9,6 +9,7 @@ import com.bordozer.rullity.api.RuleCondition;
 
 import lombok.RequiredArgsConstructor;
 
+@SuppressWarnings("PMD.AvoidFieldNameMatchingMethodName")
 @RequiredArgsConstructor
 public class RuleBuilder<T, R> {
 

@@ -14,8 +14,8 @@ import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 
 import com.bordozer.rullity.data.ActionError;
-import com.bordozer.rullity.data.obj.Item;
-import com.bordozer.rullity.data.obj.Price;
+import com.bordozer.rullity.data.fact.Item;
+import com.bordozer.rullity.data.fact.Price;
 
 class RulesEngineTest {
 

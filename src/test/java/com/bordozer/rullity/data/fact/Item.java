@@ -1,4 +1,4 @@
-package com.bordozer.rullity.data.obj;
+package com.bordozer.rullity.data.fact;
 
 import java.util.List;
 

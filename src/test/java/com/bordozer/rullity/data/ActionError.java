@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.annotation.CheckForNull;
 
+@SuppressWarnings("PMD.AvoidFieldNameMatchingMethodName")
 @Getter
 @Setter
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)

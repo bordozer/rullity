@@ -3,12 +3,13 @@ package com.bordozer.rullity.data.check.rule;
 import com.bordozer.rullity.core.Rule;
 import com.bordozer.rullity.core.RuleBuilder;
 import com.bordozer.rullity.data.ActionError;
-import com.bordozer.rullity.data.obj.Item;
+import com.bordozer.rullity.data.fact.Item;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Optional;
 
+@SuppressWarnings("checkstyle:MagicNumber")
 public final class ItemRules {
 
     public static final Rule<Item, ActionError> ITEM_NAME_IS_BLANK_FATAL_RULE = itemNameIsBlank();

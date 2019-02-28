@@ -1,4 +1,4 @@
-package com.bordozer.rullity.data.obj;
+package com.bordozer.rullity.data.fact;
 
 import java.time.LocalDate;
 
@@ -13,5 +13,5 @@ import lombok.ToString;
 @ToString
 public class Price {
     private final LocalDate date;
-    private final Double price;
+    private final Double priceValue;
 }

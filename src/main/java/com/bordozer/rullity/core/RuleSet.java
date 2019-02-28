@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import lombok.Getter;
 
 @Getter
-public class RuleSet<T, R> {
+public final class RuleSet<T, R> {
 
     private final List<Rule<T, R>> rules = newArrayList();
     private final List<RuleSet<T, R>> ruleSets = newArrayList();
