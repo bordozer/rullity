@@ -59,8 +59,8 @@ public class RulesEngine<T, R> {
 
     private List<RuleActionResult<T, R>> doFire(final Stream<T> stream) {
         return stream
-                .peek(ob -> LOGGER.info("Processing fact {} in thread {}", ob, Thread.currentThread().getName()))
-                .map(obj -> applyRulesToFact(obj, this.rules))
+                .peek(fact -> LOGGER.info("Processing fact {} in thread {}", fact, Thread.currentThread().getName()))
+                .map(fact -> applyRulesToFact(fact, this.rules))
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
     }
