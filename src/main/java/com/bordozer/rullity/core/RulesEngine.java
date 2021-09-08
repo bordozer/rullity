@@ -1,14 +1,13 @@
 package com.bordozer.rullity.core;
 
-import static com.google.common.collect.Lists.newArrayList;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
+import static com.google.common.collect.Lists.newArrayList;
 
 @SuppressWarnings("PMD.AvoidFieldNameMatchingMethodName")
 @Slf4j
@@ -18,9 +17,6 @@ public class RulesEngine<T, R> {
     private final List<T> facts = newArrayList();
     private final List<Rule<T, R>> rules = newArrayList();
     private final List<RuleActionResult<T, R>> ruleCheckResultsContainer = newArrayList();
-
-    @Getter(value = AccessLevel.PRIVATE)
-    private Boolean stoppedByFatal = Boolean.FALSE;
 
     public RulesEngine<T, R> facts(final T fact) {
         this.facts.add(fact);
