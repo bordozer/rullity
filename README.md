@@ -66,9 +66,9 @@ Firing rules
     final List<RuleActionResult<Item, ActionError>> ruleActionResults = new RulesEngine<Item, ActionError>()
                 .objects(item)
                 .rules(
-                        ITEM_NAME_IS_BLANK_FATAL_RULE,
-                        ITEM_NAME_IS_TOO_SHORT_RULE,
-                        ITEM_PRICES_IS_EMPTY_FATAL_RULE
+                        itemNameIsBlank(),
+                        itemNameIsTooShort(),
+                        itemPricesIsEmpty()
                 )
                 .fire();
 ```
